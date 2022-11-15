@@ -1,0 +1,28 @@
+<%-include('./header')%>
+
+      <!-- Form start -->
+      <div class="container">
+        <div class="login-form">
+          <form action="/updateuser" method="post">
+            <input type="hidden" name="user_id" value="<%=result.user_id %>">
+          <div>
+            <label for="name">Name</label>
+            <input type="text" name="name" id="name" value="<%= result.name%>">
+          </div>
+          <div>
+            <label for="contact">Contact No.</label>
+            <input type="number" name="contact" id="contact" value="<%= result.contact%>">
+          </div>
+          <div>
+            <label for="password">Create Password</label>
+            <input type="password" name="password" id="password" value="<%= result.password%>">
+          </div>
+          <button type="submit">Update</button>
+          </form>
+        </div>
+        <div>
+            <h6>Already a User ? <span style="font-size: 18px;"><a href="/login"> Login Here</a> </span></h6>
+          </div>
+      </div>
+      <!-- Form end -->
+<%-include('./footer')%>

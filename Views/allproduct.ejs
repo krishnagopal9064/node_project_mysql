@@ -1,0 +1,30 @@
+<%-include('./header2')%>
+
+<div class="container">  
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <td>Product ID</td>
+                <td>Product Name</td>
+                <td>Product Price</td>
+                <!-- <td>Product Added By</td> -->
+                <td>Action</td>
+            </tr>
+        </thead>
+        <tbody>
+            <% for(let data of results) { %>
+            <tr>
+                <td><%= data.product_id %></td>
+                <td><%= data.name %></td>
+                <td><%= data.price %></td>
+                <!-- <td><%= data.users.name %></td> -->
+                <td> <button class="btn btn-primary"> <a href="/editproduct/<%= data.product_id %>" style="color:white; text-decoration:none;"> Edit </a> </button>
+                    <button class="btn btn-danger"> <a href="/deleteproduct/<%= data.product_id %>" style="color:white; text-decoration:none;"> Delete </a> </button>
+                </td>
+            </tr>
+            <% } %>
+        </tbody>
+    </table>
+    </div> 
+
+<%-include('./footer')%>

@@ -1,0 +1,16 @@
+.home-para{
+    background-color: rgba(250, 99, 99, 0.268);
+    padding: 50px 100px;
+  }
+  .about-heading{
+      background-color: rgb(251, 255, 190);
+      text-align: center;
+      padding-top: 15px;
+      padding-bottom: 15px;
+      margin-bottom: 0px;
+  }
+  .footer{
+      background-color: black;
+      color: white;
+      font-size: 16px;
+  }
